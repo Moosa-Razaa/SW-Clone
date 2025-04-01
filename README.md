@@ -96,3 +96,16 @@ This project aims to build a **SplitWise-like app** using **Microservices** arch
 - **Advanced AI for Expense Categorization:** Improve accuracy of automatic expense classification with machine learning models.  
 
 ---
+
+## **Project Timeline**
+
+| **Phase**                     | **Tasks**                                                               | **Time Estimate**      |
+|-------------------------------|------------------------------------------------------------------------|------------------------|
+| **1. Setup Phase**             | Backend & Frontend Setup, Dockerization, CI/CD setup                    | 2-3 weeks              |
+| **2. Backend Development**     | User Authentication, Groups, Expenses, Payments, OCR, Notifications    | 5-7 weeks              |
+| **3. Frontend Development**    | UI/UX Implementation, Expense Management, Notifications, Charts        | 5-7 weeks              |
+| **4. Testing & Debugging**     | Backend & Frontend Testing, Integration Testing                        | 3-5 weeks              |
+| **5. Deployment & DevOps**     | Kubernetes Setup, Cloud Deployment, CI/CD Integration                  | 4-6 weeks              |
+| **6. Final Polish & Documentation** | UI Polish, Documentation, Launch Prep                              | 4-5 weeks              |
+
+**Total Project Duration Estimate:** **4 - 6 months**
