@@ -73,10 +73,10 @@ This project aims to build a **SplitWise-like app** using **Microservices** arch
 - **Language:** Go  
 - **Framework:** Fiber/Echo  
 - **Database:** PostgreSQL  
-- **Notification Service:** Firebase Cloud Messaging or OneSignal  
-- **Currency Conversion API:** Open Exchange Rates or CurrencyLayer  
-- **OCR:** Tesseract or other OCR APIs  
-- **Export Reports:** GoPDF, encoding/csv
+- **Notification Service:** Firebase Cloud Messaging or OneSignal(not confirmed)  
+- **Currency Conversion API:** Open Exchange Rates or CurrencyLayer 
+- **OCR:** Tesseract or other OCR APIs(not confirmed)  
+- **Export Reports:** GoPDF, encoding/csv(not confirmed)
 
 ### **Frontend**  
 - **Language:** JavaScript/TypeScript (React Native)  
