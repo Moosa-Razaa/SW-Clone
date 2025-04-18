@@ -28,7 +28,7 @@ func NewDatabaseConfig() *DBConfig {
 		Host:                   helpers.GetEnv("DB_HOST", "localhost"),
 		Port:                   port,
 		Username:               helpers.GetEnv("DB_USERNAME", "postgres"),
-		Password:               helpers.GetEnv("DB_PASSWORD", "password"),
+		Password:               helpers.GetEnv("DB_PASSWORD", "Password123_"),
 		DatabaseName:           helpers.GetEnv("DB_NAME", "authentication"),
 		SSLMode:                helpers.GetEnv("DB_SSL_MODE", "disable"),
 		MaxOpenConnections:     maxOpenConnections,
@@ -45,3 +45,5 @@ func (connectionString *DBConfig) GetConnectionString() string {
 		" dbname=" + connectionString.DatabaseName +
 		" sslmode=" + connectionString.SSLMode
 }
+
+// docker run --name MoosaRaza -e POSTGRES_PASSWORD=Password123_ -p 5432:5432 -d postgres
