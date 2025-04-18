@@ -18,7 +18,7 @@ type DBConfig struct {
 	ConnectionsMaxLifetime int    `mapstructure:"connections_max_lifetime"`
 }
 
-func GetDatabaseConnection() *DBConfig {
+func NewDatabaseConfig() *DBConfig {
 	port, _ := strconv.Atoi(helpers.GetEnv("DB_PORT", "5432"))
 	maxOpenConnections, _ := strconv.Atoi(helpers.GetEnv("DB_MAX_OPEN_CONNECTIONS", "10"))
 	maxIdleConnections, _ := strconv.Atoi(helpers.GetEnv("DB_MAX_IDLE_CONNECTIONS", "5"))
