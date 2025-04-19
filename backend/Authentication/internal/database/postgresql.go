@@ -9,6 +9,7 @@ import (
 	"github.com/Moosa-Razaa/Authentication/internal/config"
 	"github.com/golang-migrate/migrate/v4"
 	"github.com/golang-migrate/migrate/v4/database/postgres"
+	_ "github.com/golang-migrate/migrate/v4/source/file"
 )
 
 var db *sql.DB
@@ -45,7 +46,7 @@ func RunMigrations(database *sql.DB, databaseName string) error {
 		return fmt.Errorf("failed to create database migration driver: %w", err)
 	}
 
-	migrationsPath := "file://../../Authentication/migrations"
+	migrationsPath := "file://../../migrations"
 
 	migrateInstance, err := migrate.NewWithDatabaseInstance(migrationsPath, databaseName, driver)
 	if err != nil {

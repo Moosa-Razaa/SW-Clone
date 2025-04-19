@@ -29,7 +29,7 @@ func NewDatabaseConfig() *DBConfig {
 		Port:                   port,
 		Username:               helpers.GetEnv("DB_USERNAME", "postgres"),
 		Password:               helpers.GetEnv("DB_PASSWORD", "Password123_"),
-		DatabaseName:           helpers.GetEnv("DB_NAME", "authentication"),
+		DatabaseName:           helpers.GetEnv("DB_NAME", "authdb"),
 		SSLMode:                helpers.GetEnv("DB_SSL_MODE", "disable"),
 		MaxOpenConnections:     maxOpenConnections,
 		MaxIdleConnections:     maxIdleConnections,
