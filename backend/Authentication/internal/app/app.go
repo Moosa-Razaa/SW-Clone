@@ -9,6 +9,7 @@ import (
 	"syscall"
 
 	"github.com/Moosa-Razaa/Authentication/internal/database"
+	"github.com/gin-gonic/gin"
 )
 
 type App struct {
@@ -43,22 +44,23 @@ func (application *App) Start() error {
 	}()
 
 	fmt.Println("Server started on port 8080")
-	application.waitForShutdown()
+	application.WaitForShutDown()
 	return nil
 }
 
-func SetupRoutes() http.Handler {
-	mux := http.NewServeMux()
+func SetupRoutes() *gin.Engine {
+	router := gin.Default()
 
-	mux.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("Service is healthy"))
+	router.GET("/health", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "Server is healthy",
+		})
 	})
 
-	return mux
+	return router
 }
 
-func (application *App) waitForShutdown() {
+func (application *App) WaitForShutDown() {
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
 	<-quit
